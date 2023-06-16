@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.createText{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+li{
+    margin-bottom: 50px;
+}
