@@ -4,21 +4,21 @@ const createBtn = document.querySelector('.createBtn');
 const deleteBtn = document.querySelector('.deleteBtn');
 const list = document.querySelector('.list');
 
-let ids = 1;
 
-createBtn.addEventListener('click',()=>{
-    if(title.value || textarea.value == true){
-    localStorage.setItem(ids, `${title.value} - ${textarea.value}`);
-    const titleData = localStorage.getItem(ids);
-    const li = document.createElement('li');
-    li.innerText = titleData;
-    list.appendChild(li);
-    textarea.value = "";
-    title.value = "";
-    ids++;
-    } else false;
-    
-})
+
+createBtn.addEventListener('click', () => {
+    if (title.value || textarea.value) {
+      const memo = `${title.value} - ${textarea.value}`;
+      const key = localStorage.length + 1; // 새로운 메모를 저장할 키 생성
+      localStorage.setItem(key, memo);
+      const li = document.createElement('li');
+      li.innerText = memo;
+      list.appendChild(li);
+      textarea.value = "";
+      title.value = "";
+    }
+  });
+  
 
 deleteBtn.addEventListener('click',()=>{
     localStorage.clear();
