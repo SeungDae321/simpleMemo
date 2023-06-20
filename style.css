@@ -1,12 +1,23 @@
+body{
+    text-align: center;
+}
+
 .container{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .createText{
     display: flex;
     flex-direction: column;
     max-width: 500px;
+}
+
+ul{
+    text-align: left;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 li{
