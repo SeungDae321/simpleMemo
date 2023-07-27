@@ -22,7 +22,7 @@ const writeMemo = document.querySelector('#write-memo');
 createBtn.addEventListener('click', () => {
   let date = new Date();
     if (title.value || textarea.value) {
-      const memo = `${date.toLocaleString()}<br><b>${title.value}</b><br><b><hr></b>${textarea.value}`;
+      const memo = `${date.toLocaleString()}<br><b>${title.value}</b><br><hr>${textarea.value}`;
       localStorage.setItem(memo, memo);
       const li = document.createElement('li');
       const pre = document.createElement('pre')
@@ -46,7 +46,7 @@ deleteBtn.addEventListener('click',()=>{
 })
 
 //delete
-list.addEventListener('click',(evt)=>{
+list.addEventListener('dblclick',(evt)=>{
   const delconfirm = confirm('메모를 삭제 하겠습니까?');
   if(delconfirm){
     evt.target.remove();
