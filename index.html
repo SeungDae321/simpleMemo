@@ -4,22 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Memo</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>the simple memo</h1>
     <div class="container">
-        <section class="createText">
-        <h2>Write some memo</h2>
-        <input class="title" type="text" placeholder="Title...">
-        <Textarea class="textarea" placeholder="ADD SOME MEMOS" cols="100" rows="30"></Textarea>
-        <button class="createBtn">Send</button>
-    </section>
-    <section class="viewList">
-        <h2>Memo List</h2>
-        <button class="deleteBtn">Delete all data</button>
-        <ul class="list"></ul>
-    </section>
+        <header>
+            <h1>the simple memo</h1>
+            <nav>
+                <button id="view-memo" class="btn btn-success">메모 작성</button>
+            </nav>
+        </header>
+        
+        <hr>
+        <section class="createText disable">
+            <h2>메모 작성란</h2>
+            <input class="title" type="text" placeholder="Title..." required>
+            <Textarea required class="textarea" placeholder="ADD SOME MEMOS" cols="90" rows="15" maxlength="500"></Textarea>
+            <button class="createBtn btn btn-primary">Send</button>
+        </section>
+
+        <section class="viewList">
+            <h2>메모 List</h2>
+            <button class="deleteBtn btn btn-danger">전체 삭제</button>
+            <div class="container">
+                <ul class="list"></ul>
+            </div>
+        </section>
     </div>
     <script src="index.js"></script>
 </body>
