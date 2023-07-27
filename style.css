@@ -25,8 +25,11 @@ li{
 }
 
 li:hover{
-    background-color: rgb(165, 126, 42);
-    color: white;
+    background-color: rgba(90, 42, 165, 0.5);
+}
+
+li:active{
+    background-color: rgba(101, 60, 100, 0.5);
 }
 
 .disable{
