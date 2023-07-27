@@ -17,8 +17,6 @@ const list = document.querySelector('.list');
 const viewMemo = document.querySelector('#view-memo');
 const writeMemo = document.querySelector('#write-memo');
 
-
-
 createBtn.addEventListener('click', () => {
   let date = new Date();
     if (title.value || textarea.value) {
@@ -54,8 +52,6 @@ list.addEventListener('dblclick',(evt)=>{
   }
 })
 
-
-
 viewMemo.addEventListener('click',()=>{
   if(viewMemo.innerText === '메모 작성'){
     viewMemo.innerText = '돌아가기'
@@ -66,5 +62,3 @@ viewMemo.addEventListener('click',()=>{
   document.querySelector('.createText').classList.toggle('disable');
   document.querySelector('.viewList').classList.toggle('disable');
 })
-
-
